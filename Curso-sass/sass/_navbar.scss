@@ -1,0 +1,43 @@
+// $selector: '.nav';
+//*$flex: 'display'
+$primary: crimson;
+@use 'mixinsfunc';
+
+:root {
+  --primary: #{$primary};
+}
+
+
+// .nav ul { } // .nav ul li {}  // .nav ul li a {}
+.nav {
+  //#{$selector} {}
+  background-color: steelblue;
+
+  &__container {
+    width: 90%;
+    margin: auto;
+    height: 70px;
+    //display: flex; //*#{$flex}: flex
+    @include mixinsfunc.crear-flexbox(center);
+    gap: 1em;
+  }
+
+  &__item {
+    color: #fff;
+    text-decoration: none;
+
+    &--active {
+      text-decoration: underline;
+    }
+
+    // &:hover {
+    //     color: #000;
+    // }
+  }
+
+  @media (min-width: 764px) {
+    &__container {
+      justify-content: flex-end;
+    }
+  }
+}

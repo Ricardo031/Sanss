@@ -1,0 +1,61 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+:root {
+  --primary: crimson;
+}
+
+.nav {
+  background-color: steelblue;
+}
+.nav__container {
+  width: 90%;
+  margin: auto;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+}
+.nav__item {
+  color: #fff;
+  text-decoration: none;
+}
+.nav__item--active {
+  text-decoration: underline;
+}
+@media (min-width: 764px) {
+  .nav__container {
+    justify-content: flex-end;
+  }
+}
+
+.hero__container {
+  height: calc(100vh - 70px);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5411764706), rgba(0, 0, 0, 0.6862745098)), url(../img/interior.jpg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.hero__texts {
+  width: 90%;
+  color: #fff;
+}
+.hero__title {
+  font-size: 2.5rem;
+  margin-bottom: 0.625rem;
+}
+.hero__paragraph {
+  font-size: 1.125rem;
+}
+
+/*# sourceMappingURL=styles.css.map */
